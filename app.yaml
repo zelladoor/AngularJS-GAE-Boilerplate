@@ -1,0 +1,30 @@
+application: angularjs-gae-boilerplate
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /components
+  static_dir: app/components/
+
+- url: /scripts
+  static_dir: app/scripts/
+
+- url: /styles
+  static_dir: app/styles/
+
+- url: /views
+  static_dir: app/views/
+
+- url: .*
+  static_files: app/index.html
+  upload: app/index.html  
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
